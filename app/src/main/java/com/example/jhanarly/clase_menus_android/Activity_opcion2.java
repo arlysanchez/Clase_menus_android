@@ -1,27 +1,18 @@
 package com.example.jhanarly.clase_menus_android;
 
-import android.app.Activity;
-import android.content.Intent;//libreria para llamar a otra actividad
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
-
-    TextView txt01;
+public class Activity_opcion2 extends ActionBarActivity {
 
     @Override
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        txt01=(TextView) findViewById(R.id.Txt_result);
-
+        setContentView(R.layout.activity_opcion2);
     }
 
 
@@ -40,19 +31,23 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.action_settings: return true;
-            //
+            case R.id.action_settings:
+                return true;
             case R.id.inicio:
-                //
+                Intent main = new Intent(this, MainActivity.class);
+                startActivity(main); // clase que permite llamar a otra actividad
+                return true;
             case R.id.opcion1:
-                Intent opc1 = new Intent(this, opcion1Activity.class); startActivity(opc1); // clase que permite llamar a otra actividad
+                Intent opc1 = new Intent(this, opcion1Activity.class);
+                startActivity(opc1); // clase que permite llamar a otra actividad
                 return true;
-            //
-            case R.id.opcion2:
-                Intent opc2 = new Intent(this, Activity_opcion2.class); startActivity(opc2); // clase que permite llamar a otra actividad
+            case R.id.opcion2:  Intent opc2 = new Intent(this, opcion1Activity.class);
+                startActivity(opc2);
+                return true; // clase que permite llamar a otra actividad
+            case R.id.opcion1_1:
                 return true;
-            case R.id.opcion1_1:return true;
-            default: return super.onOptionsItemSelected(item);
+            default:
+                return super.onOptionsItemSelected(item);
 
         }
     }

@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Clase_menus_android</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world1">Activity opcion2</string>
+    <string name="hello_world">Activity opcion1</string>
     <string name="action_settings">Settings</string>
     <string name="inicio">inicio</string>
     <string name="opcion1">opcion1</string>
     <string name="opcion2">opcion2</string>
     <string name="opcion1.1">opcion1.1</string>
+    <string name="title_activity_opcion1">opcion1Activity</string>
+    <string name="title_activity_activity_opcion2">Activity_opcion2</string>
 </resources>
